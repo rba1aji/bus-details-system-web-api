@@ -9,13 +9,9 @@ public class BusDetail
     public string? Origin { get; set; }
     [Required]
     public string? Destination { get; set; }
-
+ 
     [Required]
-    public int Votes
-    {
-        get;// { return Votes; }
-        set;// { Votes = 0; }
-    }
+    public int Votes { get; set; }
     [Required]
     public string? BusOwner { get; set; }
     public string? BusNo { get; set; }
@@ -44,6 +40,7 @@ public class BusDetail
     //     this.DestinationTime=ob.DestinationTime;
     //     this.AuthorName=ob.AuthorName;
     //     this.PostDate=DateTime.Now.ToString("MM/dd/yyyy");
+
     // }
 
     // [Required]
