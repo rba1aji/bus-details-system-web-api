@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace BusDetailsSystem.Migrations
 {
-    public partial class migrate : Migration
+    public partial class m1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,14 +17,14 @@ namespace BusDetailsSystem.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Origin = table.Column<string>(type: "text", nullable: false),
                     Destination = table.Column<string>(type: "text", nullable: false),
-                    Votes = table.Column<int>(type: "integer", nullable: false),
                     BusOwner = table.Column<string>(type: "text", nullable: false),
                     BusNo = table.Column<string>(type: "text", nullable: true),
                     BusName = table.Column<string>(type: "text", nullable: true),
                     OriginTime = table.Column<string>(type: "text", nullable: true),
                     DestinationTime = table.Column<string>(type: "text", nullable: true),
                     AuthorName = table.Column<string>(type: "text", nullable: false),
-                    PostDate = table.Column<string>(type: "text", nullable: true)
+                    Votes = table.Column<int>(type: "integer", nullable: false),
+                    PostDate = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

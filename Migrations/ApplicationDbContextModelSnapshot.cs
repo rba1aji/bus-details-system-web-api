@@ -58,6 +58,7 @@ namespace BusDetailsSystem.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("PostDate")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Votes")

@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BusDetailsSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220910094033_migrate")]
-    partial class migrate
+    [Migration("20220910132301_m1")]
+    partial class m1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,6 +60,7 @@ namespace BusDetailsSystem.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("PostDate")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Votes")
