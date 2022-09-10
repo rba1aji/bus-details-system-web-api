@@ -6,26 +6,32 @@ public class BusDetail
     [Key]
     public int Id { get; set; }
     [Required]
-    public string? Origin { get; set; }
-    [Required]
-    public string? Destination { get; set; }
- 
-    [Required]
+    // public string? Origin { get; set; }
+    // [Required]
+    // public string? Destination { get; set; }
+    // [Required]
+    // public string? BusOwner { get; set; }
+    // public string? BusNo { get; set; }
+    // public string? BusName { get; set; }
+    // public string? OriginTime { get; set; }
+    // public string? DestinationTime { get; set; }
+    // [Required]
+    // public string? AuthorName { get; set; }
+
+    public Detail? Detail { get; set; }
     public int Votes { get; set; }
-    [Required]
-    public string? BusOwner { get; set; }
-    public string? BusNo { get; set; }
-    public string? BusName { get; set; }
-    public string? OriginTime { get; set; }
-    public string? DestinationTime { get; set; }
-    [Required]
-    public string? AuthorName { get; set; }
+    [Required]    
     public string? PostDate { get; set; }
 
     public void doVote(int vote)
     {
         this.Votes += vote;
     }
+
+    // public BusDetail(PostRequestDetail ob)
+    // {
+        
+    // }
 
     // public BusDetail(PostRequestDetail ob)
     // {

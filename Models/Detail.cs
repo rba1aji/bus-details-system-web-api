@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusDetailsSystem.Models
 {
-    public class PostRequestDetail
+    public class Detail
     {
         [Required]
         public string? Origin { get; set; }

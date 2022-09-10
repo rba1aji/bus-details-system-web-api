@@ -23,25 +23,17 @@ namespace BusDetailsSystem.Controllers
         [HttpGet("{travel}")]
         public ActionResult<IEnumerable<BusDetail>> GetBusDtlsByOrgDest(string travel)
         {
-            var res = _db.BusDetails?.ToList().FindAll(item => item.Origin == travel.Split("2")[0] && item.Destination == travel.Split("2")[1]);
+            var res = _db.BusDetails?.ToList().FindAll(item => item?.Detail?.Origin == travel.Split("2")[0] && item.Detail.Destination == travel.Split("2")[1]);
 
             return Ok(res);
         }
 
         [HttpPost]
-        public ActionResult<string> PostABusDetail([FromBody] PostRequestDetail Dtl)
+        public ActionResult<string> PostABusDetail([FromBody] Detail Dtl)
         {
             BusDetail newBusDtl = new BusDetail();
-
-            newBusDtl.Origin = Dtl.Origin;
-            newBusDtl.Destination = Dtl.Destination;
+            newBusDtl.Detail=Dtl;
             newBusDtl.Votes = 0;
-            newBusDtl.BusOwner = Dtl.BusOwner;
-            newBusDtl.BusNo = Dtl.BusNo;
-            newBusDtl.BusName = Dtl.BusName;
-            newBusDtl.OriginTime = Dtl.OriginTime;
-            newBusDtl.DestinationTime = Dtl.DestinationTime;
-            newBusDtl.AuthorName = Dtl.AuthorName;
             newBusDtl.PostDate = DateTime.Now.ToString("MM/dd/yyyy");
 
             _db.BusDetails?.Add(newBusDtl);
