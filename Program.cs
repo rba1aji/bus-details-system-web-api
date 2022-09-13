@@ -12,9 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
-                      policy =>
+                      builder =>
                       {
-                          policy.WithOrigins("http://localhost:3000");
+                          builder.WithOrigins("http://localhost:3000","https://localhost:3000");
                       });
 });
 
