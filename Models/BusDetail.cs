@@ -22,10 +22,15 @@ public class BusDetail
     [Required]
     public string? PostDate { get; set; }
 
-    public void doVote(int vote)
+    public void upVote()
     {
-        this.Votes += vote;
+        this.Votes += 1;
     }
+    public void downVote()
+    {
+        this.Votes -= 1;
+    }
+    
 
     // public BusDetail(PostRequestDetail ob)
     // {

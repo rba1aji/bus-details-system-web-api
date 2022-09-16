@@ -55,17 +55,20 @@ namespace BusDetailsSystem.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult<string> DoVote(int id, [FromBody] int vote)
+        public ActionResult<string> DoVote(int id, [FromBody] string voteType)
         {
             if (_db.BusDetails?.Find(id) == null)
             {
                 return BadRequest("invalid id");
             }
 
-            _db.BusDetails?.Find(id)?.doVote(vote);
+            if (voteType == "up") _db.BusDetails.Find(id)?.upVote();
+            else if(voteType == "down") _db.BusDetails.Find(id)?.downVote();
+            else return BadRequest("incorrect vote");
+
             _db.SaveChanges();
 
-            return Ok(vote == 1 ? "Upvoted" : "downVoted");
+            return Ok($"{voteType}Voted");
         }
 
         [HttpDelete("{id}")]
