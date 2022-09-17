@@ -18,7 +18,6 @@ namespace BusDetailsSystem.Migrations
                     Origin = table.Column<string>(type: "text", nullable: false),
                     Destination = table.Column<string>(type: "text", nullable: false),
                     BusOwner = table.Column<string>(type: "text", nullable: false),
-                    BusNo = table.Column<string>(type: "text", nullable: true),
                     BusName = table.Column<string>(type: "text", nullable: true),
                     OriginTime = table.Column<string>(type: "text", nullable: true),
                     DestinationTime = table.Column<string>(type: "text", nullable: true),

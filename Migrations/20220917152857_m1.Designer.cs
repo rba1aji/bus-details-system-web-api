@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BusDetailsSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220910132301_m1")]
+    [Migration("20220917152857_m1")]
     partial class m1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,9 +36,6 @@ namespace BusDetailsSystem.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("BusName")
-                        .HasColumnType("text");
-
-                    b.Property<string>("BusNo")
                         .HasColumnType("text");
 
                     b.Property<string>("BusOwner")

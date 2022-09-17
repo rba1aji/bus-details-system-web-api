@@ -41,7 +41,6 @@ namespace BusDetailsSystem.Controllers
             newBusDtl.Destination = Dtl.Destination;
             newBusDtl.Votes = 0;
             newBusDtl.BusOwner = Dtl.BusOwner;
-            newBusDtl.BusNo = Dtl.BusNo;
             newBusDtl.BusName = Dtl.BusName;
             newBusDtl.OriginTime = Dtl.OriginTime;
             newBusDtl.DestinationTime = Dtl.DestinationTime;

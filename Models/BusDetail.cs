@@ -11,7 +11,6 @@ public class BusDetail
     public string? Destination { get; set; }
     [Required]
     public string? BusOwner { get; set; }
-    public string? BusNo { get; set; }
     public string? BusName { get; set; }
     public string? OriginTime { get; set; }
     public string? DestinationTime { get; set; }

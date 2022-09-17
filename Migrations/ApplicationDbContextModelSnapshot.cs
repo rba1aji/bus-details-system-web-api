@@ -36,9 +36,6 @@ namespace BusDetailsSystem.Migrations
                     b.Property<string>("BusName")
                         .HasColumnType("text");
 
-                    b.Property<string>("BusNo")
-                        .HasColumnType("text");
-
                     b.Property<string>("BusOwner")
                         .IsRequired()
                         .HasColumnType("text");
